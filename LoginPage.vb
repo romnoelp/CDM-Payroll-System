@@ -5,6 +5,7 @@
         Me.FormBorderStyle = FormBorderStyle.FixedSingle
         Me.MaximizeBox = False
         Me.MinimizeBox = False
+        Me.ControlBox = False
         PasswordField.UseSystemPasswordChar = False
         UsernameField.Font = New Font("Verdana", 16.0F, FontStyle.Regular)
         PasswordField.Font = New Font("Verdana", 16.0F, FontStyle.Regular) ' Test comment 
@@ -38,5 +39,9 @@
             PasswordField.UseSystemPasswordChar = False ' Show placeholder text
             PasswordField.ForeColor = Color.Silver
         End If
+    End Sub
+
+    Private Sub RegistrationButton_Click(sender As Object, e As EventArgs) Handles RegistrationButton.Click
+        RegistrationPage.Show()
     End Sub
 End Class

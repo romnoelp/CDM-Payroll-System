@@ -38,7 +38,7 @@ Partial Class LoginPage
         PasswordField = New TextBox()
         UsernameField = New TextBox()
         Panel6 = New Panel()
-        Button2 = New Button()
+        RegistrationButton = New Button()
         Button1 = New Button()
         Panel1.SuspendLayout()
         Panel4.SuspendLayout()
@@ -221,7 +221,7 @@ Partial Class LoginPage
         ' Panel6
         ' 
         Panel6.BackColor = Color.White
-        Panel6.Controls.Add(Button2)
+        Panel6.Controls.Add(RegistrationButton)
         Panel6.Controls.Add(Button1)
         Panel6.Location = New Point(7, 296)
         Panel6.Margin = New Padding(8, 3, 8, 3)
@@ -230,18 +230,18 @@ Partial Class LoginPage
         Panel6.Size = New Size(360, 46)
         Panel6.TabIndex = 6
         ' 
-        ' Button2
+        ' RegistrationButton
         ' 
-        Button2.Dock = DockStyle.Right
-        Button2.FlatStyle = FlatStyle.Flat
-        Button2.Font = New Font("Verdana", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Button2.ForeColor = Color.FromArgb(CByte(255), CByte(199), CByte(0))
-        Button2.Location = New Point(213, 0)
-        Button2.Name = "Button2"
-        Button2.Size = New Size(127, 46)
-        Button2.TabIndex = 3
-        Button2.Text = "Register"
-        Button2.UseVisualStyleBackColor = True
+        RegistrationButton.Dock = DockStyle.Right
+        RegistrationButton.FlatStyle = FlatStyle.Flat
+        RegistrationButton.Font = New Font("Verdana", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        RegistrationButton.ForeColor = Color.FromArgb(CByte(255), CByte(199), CByte(0))
+        RegistrationButton.Location = New Point(213, 0)
+        RegistrationButton.Name = "RegistrationButton"
+        RegistrationButton.Size = New Size(127, 46)
+        RegistrationButton.TabIndex = 3
+        RegistrationButton.Text = "Register"
+        RegistrationButton.UseVisualStyleBackColor = True
         ' 
         ' Button1
         ' 
@@ -293,7 +293,7 @@ Partial Class LoginPage
     Friend WithEvents Panel5 As Panel
     Friend WithEvents Panel6 As Panel
     Friend WithEvents Button1 As Button
-    Friend WithEvents Button2 As Button
+    Friend WithEvents RegistrationButton As Button
     Friend WithEvents UsernameField As TextBox
     Friend WithEvents PasswordField As TextBox
     Friend WithEvents RememberCredentials As CheckBox

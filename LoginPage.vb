@@ -26,7 +26,7 @@
 
     Private Sub PasswordField_Enter(sender As Object, e As EventArgs) Handles PasswordField.Enter
         If PasswordField.Text = "Password" Then
-            PasswordField.Text = ""
+            PasswordField.Text = "" ' showpassword
             PasswordField.UseSystemPasswordChar = True ' Hide characters with asterisks
             PasswordField.ForeColor = Color.Black
         End If

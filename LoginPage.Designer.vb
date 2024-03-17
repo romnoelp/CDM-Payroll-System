@@ -31,16 +31,24 @@ Partial Class LoginPage
         Panel2 = New Panel()
         PictureBox1 = New PictureBox()
         Panel5 = New Panel()
+        PictureBox4 = New PictureBox()
+        PictureBox3 = New PictureBox()
+        LinkLabel1 = New LinkLabel()
+        RememberCredentials = New CheckBox()
+        PasswordField = New TextBox()
+        UsernameField = New TextBox()
         Panel6 = New Panel()
+        Button2 = New Button()
         Button1 = New Button()
-        Panel7 = New Panel()
-        Panel8 = New Panel()
         Panel1.SuspendLayout()
         Panel4.SuspendLayout()
         Panel3.SuspendLayout()
         CType(PictureBox2, ComponentModel.ISupportInitialize).BeginInit()
         Panel2.SuspendLayout()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
+        Panel5.SuspendLayout()
+        CType(PictureBox4, ComponentModel.ISupportInitialize).BeginInit()
+        CType(PictureBox3, ComponentModel.ISupportInitialize).BeginInit()
         Panel6.SuspendLayout()
         SuspendLayout()
         ' 
@@ -130,67 +138,148 @@ Partial Class LoginPage
         ' 
         ' Panel5
         ' 
-        Panel5.BackColor = Color.FromArgb(CByte(128), CByte(255), CByte(128))
+        Panel5.BackColor = Color.White
+        Panel5.Controls.Add(PictureBox4)
+        Panel5.Controls.Add(PictureBox3)
+        Panel5.Controls.Add(LinkLabel1)
+        Panel5.Controls.Add(RememberCredentials)
+        Panel5.Controls.Add(PasswordField)
+        Panel5.Controls.Add(UsernameField)
         Panel5.Dock = DockStyle.Top
         Panel5.Location = New Point(0, 88)
         Panel5.Name = "Panel5"
-        Panel5.Size = New Size(384, 224)
+        Panel5.Size = New Size(384, 202)
         Panel5.TabIndex = 5
+        ' 
+        ' PictureBox4
+        ' 
+        PictureBox4.Image = CType(resources.GetObject("PictureBox4.Image"), Image)
+        PictureBox4.Location = New Point(16, 97)
+        PictureBox4.Name = "PictureBox4"
+        PictureBox4.Size = New Size(84, 54)
+        PictureBox4.SizeMode = PictureBoxSizeMode.Zoom
+        PictureBox4.TabIndex = 5
+        PictureBox4.TabStop = False
+        ' 
+        ' PictureBox3
+        ' 
+        PictureBox3.Image = CType(resources.GetObject("PictureBox3.Image"), Image)
+        PictureBox3.Location = New Point(16, 27)
+        PictureBox3.Name = "PictureBox3"
+        PictureBox3.Size = New Size(84, 54)
+        PictureBox3.SizeMode = PictureBoxSizeMode.Zoom
+        PictureBox3.TabIndex = 4
+        PictureBox3.TabStop = False
+        ' 
+        ' LinkLabel1
+        ' 
+        LinkLabel1.AutoSize = True
+        LinkLabel1.Font = New Font("Verdana", 9F)
+        LinkLabel1.LinkColor = Color.FromArgb(CByte(255), CByte(199), CByte(0))
+        LinkLabel1.Location = New Point(233, 166)
+        LinkLabel1.Name = "LinkLabel1"
+        LinkLabel1.Size = New Size(121, 14)
+        LinkLabel1.TabIndex = 3
+        LinkLabel1.TabStop = True
+        LinkLabel1.Text = "Forgot password?"
+        ' 
+        ' RememberCredentials
+        ' 
+        RememberCredentials.AutoSize = True
+        RememberCredentials.Font = New Font("Verdana", 9F)
+        RememberCredentials.ForeColor = Color.FromArgb(CByte(255), CByte(199), CByte(0))
+        RememberCredentials.Location = New Point(117, 165)
+        RememberCredentials.Name = "RememberCredentials"
+        RememberCredentials.Size = New Size(116, 18)
+        RememberCredentials.TabIndex = 2
+        RememberCredentials.Text = "Remember me"
+        RememberCredentials.UseVisualStyleBackColor = True
+        ' 
+        ' PasswordField
+        ' 
+        PasswordField.BackColor = SystemColors.ControlLight
+        PasswordField.Font = New Font("Verdana", 15.75F)
+        PasswordField.ForeColor = Color.FromArgb(CByte(199), CByte(199), CByte(199))
+        PasswordField.Location = New Point(117, 106)
+        PasswordField.Name = "PasswordField"
+        PasswordField.PasswordChar = "*"c
+        PasswordField.Size = New Size(237, 33)
+        PasswordField.TabIndex = 1
+        PasswordField.Text = "Password"
+        ' 
+        ' UsernameField
+        ' 
+        UsernameField.BackColor = SystemColors.ControlLight
+        UsernameField.Font = New Font("Verdana", 15.75F)
+        UsernameField.ForeColor = Color.FromArgb(CByte(199), CByte(199), CByte(199))
+        UsernameField.Location = New Point(117, 48)
+        UsernameField.Name = "UsernameField"
+        UsernameField.Size = New Size(237, 33)
+        UsernameField.TabIndex = 0
+        UsernameField.Text = "Username"
         ' 
         ' Panel6
         ' 
-        Panel6.BackColor = Color.Navy
-        Panel6.Controls.Add(Panel8)
-        Panel6.Controls.Add(Panel7)
+        Panel6.BackColor = Color.White
+        Panel6.Controls.Add(Button2)
         Panel6.Controls.Add(Button1)
-        Panel6.Location = New Point(12, 320)
+        Panel6.Location = New Point(7, 296)
+        Panel6.Margin = New Padding(8, 3, 8, 3)
         Panel6.Name = "Panel6"
-        Panel6.Size = New Size(360, 113)
+        Panel6.Padding = New Padding(20, 0, 20, 0)
+        Panel6.Size = New Size(360, 46)
         Panel6.TabIndex = 6
+        ' 
+        ' Button2
+        ' 
+        Button2.Dock = DockStyle.Right
+        Button2.FlatStyle = FlatStyle.Flat
+        Button2.Font = New Font("Verdana", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Button2.ForeColor = Color.FromArgb(CByte(255), CByte(199), CByte(0))
+        Button2.Location = New Point(213, 0)
+        Button2.Name = "Button2"
+        Button2.Size = New Size(127, 46)
+        Button2.TabIndex = 3
+        Button2.Text = "Register"
+        Button2.UseVisualStyleBackColor = True
         ' 
         ' Button1
         ' 
-        Button1.Location = New Point(116, 19)
+        Button1.BackColor = Color.FromArgb(CByte(0), CByte(82), CByte(8))
+        Button1.Dock = DockStyle.Left
+        Button1.FlatStyle = FlatStyle.Flat
+        Button1.Font = New Font("Verdana", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Button1.ForeColor = Color.White
+        Button1.Location = New Point(20, 0)
         Button1.Name = "Button1"
-        Button1.Size = New Size(119, 39)
-        Button1.TabIndex = 0
+        Button1.Size = New Size(127, 46)
+        Button1.TabIndex = 1
         Button1.Text = "Login"
-        Button1.UseVisualStyleBackColor = True
-        ' 
-        ' Panel7
-        ' 
-        Panel7.Dock = DockStyle.Left
-        Panel7.Location = New Point(0, 0)
-        Panel7.Name = "Panel7"
-        Panel7.Size = New Size(119, 113)
-        Panel7.TabIndex = 1
-        ' 
-        ' Panel8
-        ' 
-        Panel8.Dock = DockStyle.Right
-        Panel8.Location = New Point(241, 0)
-        Panel8.Name = "Panel8"
-        Panel8.Size = New Size(119, 113)
-        Panel8.TabIndex = 2
+        Button1.UseVisualStyleBackColor = False
         ' 
         ' LoginPage
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.FromArgb(CByte(254), CByte(253), CByte(246))
-        ClientSize = New Size(384, 445)
+        ClientSize = New Size(384, 354)
         Controls.Add(Panel6)
         Controls.Add(Panel5)
         Controls.Add(Panel1)
         Margin = New Padding(4, 3, 4, 3)
         Name = "LoginPage"
-        Text = "Login"
+        ShowIcon = False
+        Text = "CDM Payroll System"
         Panel1.ResumeLayout(False)
         Panel4.ResumeLayout(False)
         Panel3.ResumeLayout(False)
         CType(PictureBox2, ComponentModel.ISupportInitialize).EndInit()
         Panel2.ResumeLayout(False)
         CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
+        Panel5.ResumeLayout(False)
+        Panel5.PerformLayout()
+        CType(PictureBox4, ComponentModel.ISupportInitialize).EndInit()
+        CType(PictureBox3, ComponentModel.ISupportInitialize).EndInit()
         Panel6.ResumeLayout(False)
         ResumeLayout(False)
     End Sub
@@ -203,8 +292,13 @@ Partial Class LoginPage
     Friend WithEvents Label1 As Label
     Friend WithEvents Panel5 As Panel
     Friend WithEvents Panel6 As Panel
-    Friend WithEvents Panel7 As Panel
     Friend WithEvents Button1 As Button
-    Friend WithEvents Panel8 As Panel
+    Friend WithEvents Button2 As Button
+    Friend WithEvents UsernameField As TextBox
+    Friend WithEvents PasswordField As TextBox
+    Friend WithEvents RememberCredentials As CheckBox
+    Friend WithEvents LinkLabel1 As LinkLabel
+    Friend WithEvents PictureBox3 As PictureBox
+    Friend WithEvents PictureBox4 As PictureBox
 
 End Class

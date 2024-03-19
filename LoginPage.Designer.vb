@@ -38,7 +38,9 @@ Partial Class LoginPage
         UsernameField = New TextBox()
         Panel6 = New Panel()
         RegistrationButton = New Button()
-        Button1 = New Button()
+        LoginButton = New Button()
+        Panel4 = New Panel()
+        Label1 = New Label()
         Panel1.SuspendLayout()
         Panel3.SuspendLayout()
         CType(PictureBox2, ComponentModel.ISupportInitialize).BeginInit()
@@ -48,11 +50,13 @@ Partial Class LoginPage
         CType(PictureBox4, ComponentModel.ISupportInitialize).BeginInit()
         CType(PictureBox3, ComponentModel.ISupportInitialize).BeginInit()
         Panel6.SuspendLayout()
+        Panel4.SuspendLayout()
         SuspendLayout()
         ' 
         ' Panel1
         ' 
         Panel1.BackColor = Color.FromArgb(CByte(0), CByte(82), CByte(8))
+        Panel1.Controls.Add(Panel4)
         Panel1.Controls.Add(CloseButton)
         Panel1.Controls.Add(Panel3)
         Panel1.Controls.Add(Panel2)
@@ -211,7 +215,7 @@ Partial Class LoginPage
         ' 
         Panel6.BackColor = Color.White
         Panel6.Controls.Add(RegistrationButton)
-        Panel6.Controls.Add(Button1)
+        Panel6.Controls.Add(LoginButton)
         Panel6.Location = New Point(7, 320)
         Panel6.Margin = New Padding(8, 3, 8, 3)
         Panel6.Name = "Panel6"
@@ -232,19 +236,42 @@ Partial Class LoginPage
         RegistrationButton.Text = "Register"
         RegistrationButton.UseVisualStyleBackColor = True
         ' 
-        ' Button1
+        ' LoginButton
         ' 
-        Button1.BackColor = Color.FromArgb(CByte(0), CByte(82), CByte(8))
-        Button1.Dock = DockStyle.Left
-        Button1.FlatStyle = FlatStyle.Flat
-        Button1.Font = New Font("Verdana", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Button1.ForeColor = Color.White
-        Button1.Location = New Point(20, 0)
-        Button1.Name = "Button1"
-        Button1.Size = New Size(127, 46)
-        Button1.TabIndex = 1
-        Button1.Text = "Login"
-        Button1.UseVisualStyleBackColor = False
+        LoginButton.BackColor = Color.FromArgb(CByte(0), CByte(82), CByte(8))
+        LoginButton.Dock = DockStyle.Left
+        LoginButton.FlatStyle = FlatStyle.Flat
+        LoginButton.Font = New Font("Verdana", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        LoginButton.ForeColor = Color.White
+        LoginButton.Location = New Point(20, 0)
+        LoginButton.Name = "LoginButton"
+        LoginButton.Size = New Size(127, 46)
+        LoginButton.TabIndex = 1
+        LoginButton.Text = "Login"
+        LoginButton.UseVisualStyleBackColor = False
+        ' 
+        ' Panel4
+        ' 
+        Panel4.Controls.Add(Label1)
+        Panel4.Dock = DockStyle.Fill
+        Panel4.Location = New Point(100, 15)
+        Panel4.Margin = New Padding(3, 40, 3, 3)
+        Panel4.Name = "Panel4"
+        Panel4.Size = New Size(184, 109)
+        Panel4.TabIndex = 3
+        ' 
+        ' Label1
+        ' 
+        Label1.AutoSize = True
+        Label1.Font = New Font("Verdana", 27.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label1.ForeColor = Color.White
+        Label1.Location = New Point(0, 31)
+        Label1.Margin = New Padding(3, 10, 3, 0)
+        Label1.Name = "Label1"
+        Label1.Size = New Size(186, 45)
+        Label1.TabIndex = 0
+        Label1.Text = "CDMIPS"
+        Label1.TextAlign = ContentAlignment.MiddleCenter
         ' 
         ' LoginPage
         ' 
@@ -273,6 +300,8 @@ Partial Class LoginPage
         CType(PictureBox4, ComponentModel.ISupportInitialize).EndInit()
         CType(PictureBox3, ComponentModel.ISupportInitialize).EndInit()
         Panel6.ResumeLayout(False)
+        Panel4.ResumeLayout(False)
+        Panel4.PerformLayout()
         ResumeLayout(False)
     End Sub
     Friend WithEvents Panel1 As Panel
@@ -282,7 +311,7 @@ Partial Class LoginPage
     Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents Panel5 As Panel
     Friend WithEvents Panel6 As Panel
-    Friend WithEvents Button1 As Button
+    Friend WithEvents LoginButton As Button
     Friend WithEvents RegistrationButton As Button
     Friend WithEvents UsernameField As TextBox
     Friend WithEvents PasswordField As TextBox
@@ -291,5 +320,7 @@ Partial Class LoginPage
     Friend WithEvents PictureBox3 As PictureBox
     Friend WithEvents PictureBox4 As PictureBox
     Friend WithEvents CloseButton As Button
+    Friend WithEvents Panel4 As Panel
+    Friend WithEvents Label1 As Label
 
 End Class

@@ -1,4 +1,7 @@
-﻿Public Class LoginPage
+﻿Imports MySql.Data.MySqlClient
+
+Public Class LoginPage
+    Dim dbFunctions As New DatabaseFunctions()
     Public Sub New()
         InitializeComponent()
         Me.StartPosition = FormStartPosition.CenterScreen
@@ -7,12 +10,12 @@
         Me.ControlBox = False
         PasswordField.UseSystemPasswordChar = False
         UsernameField.Font = New Font("Verdana", 16.0F, FontStyle.Regular)
-        PasswordField.Font = New Font("Verdana", 16.0F, FontStyle.Regular) ' Test comment 
+        PasswordField.Font = New Font("Verdana", 16.0F, FontStyle.Regular)
     End Sub
 
     Private Sub LoginPage_Paint(sender As Object, e As PaintEventArgs) Handles MyBase.Paint
         Dim rect As New Rectangle(0, 0, Me.Width, Me.Height)
-        Dim radius As Integer = 25 
+        Dim radius As Integer = 25
         Dim gp As New System.Drawing.Drawing2D.GraphicsPath()
         gp.AddArc(rect.X, rect.Y, radius, radius, 180, 90)
         gp.AddArc(rect.X + rect.Width - radius, rect.Y, radius, radius, 270, 90)
@@ -57,5 +60,17 @@
 
     Private Sub ExitLogin(sender As Object, e As EventArgs) Handles CloseButton.Click
         Me.Close()
+    End Sub
+
+    Private Sub LoginButton_Click(sender As Object, e As EventArgs) Handles LoginButton.Click
+        Dim username As String = UsernameField.Text
+        Dim password As String = PasswordField.Text
+
+        If dbFunctions.AuthenticateUser(username, password) Then
+            MessageBox.Show("Login successful!")
+            ' Proceed to the next form or perform other actions here
+        Else
+            MessageBox.Show("Invalid username or password!")
+        End If
     End Sub
 End Class

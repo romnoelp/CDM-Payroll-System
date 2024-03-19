@@ -38,18 +38,33 @@ Partial Class RegistrationPage
         Label4 = New Label()
         Label3 = New Label()
         Label1 = New Label()
-        TextBox5 = New TextBox()
-        TextBox4 = New TextBox()
+        PasswordTextbox = New TextBox()
+        UsernameTextbox = New TextBox()
         Panel3 = New Panel()
-        RadioButton3 = New RadioButton()
-        RadioButton2 = New RadioButton()
-        RadioButton1 = New RadioButton()
-        DateTimePicker1 = New DateTimePicker()
-        TextBox3 = New TextBox()
-        TextBox2 = New TextBox()
-        TextBox1 = New TextBox()
+        NotToRadioButton = New RadioButton()
+        FemaleRadioButton = New RadioButton()
+        MaleRadioButton = New RadioButton()
+        BirthdayPicker = New DateTimePicker()
+        LastNameTextbox = New TextBox()
+        MiddleNameTextbox = New TextBox()
+        FirstNameTextbox = New TextBox()
         TabPage2 = New TabPage()
+        DepartmentDropdown = New ComboBox()
+        Label9 = New Label()
+        Label13 = New Label()
+        Label14 = New Label()
+        Label15 = New Label()
+        AddressTextbox = New TextBox()
+        ContactTextbox = New TextBox()
+        EmailTextbox = New TextBox()
         TabPage3 = New TabPage()
+        CompleteRegistration = New Button()
+        Label10 = New Label()
+        Label11 = New Label()
+        Label12 = New Label()
+        TinTextbox = New TextBox()
+        BankDetailsTextbox = New TextBox()
+        GovermentTextbox = New TextBox()
         Panel1.SuspendLayout()
         Panel2.SuspendLayout()
         CType(PictureBox2, ComponentModel.ISupportInitialize).BeginInit()
@@ -57,6 +72,8 @@ Partial Class RegistrationPage
         RegistrationTab.SuspendLayout()
         TabPage1.SuspendLayout()
         Panel3.SuspendLayout()
+        TabPage2.SuspendLayout()
+        TabPage3.SuspendLayout()
         SuspendLayout()
         ' 
         ' Panel1
@@ -149,27 +166,27 @@ Partial Class RegistrationPage
         TabPage1.Controls.Add(Label4)
         TabPage1.Controls.Add(Label3)
         TabPage1.Controls.Add(Label1)
-        TabPage1.Controls.Add(TextBox5)
-        TabPage1.Controls.Add(TextBox4)
+        TabPage1.Controls.Add(PasswordTextbox)
+        TabPage1.Controls.Add(UsernameTextbox)
         TabPage1.Controls.Add(Panel3)
-        TabPage1.Controls.Add(DateTimePicker1)
-        TabPage1.Controls.Add(TextBox3)
-        TabPage1.Controls.Add(TextBox2)
-        TabPage1.Controls.Add(TextBox1)
+        TabPage1.Controls.Add(BirthdayPicker)
+        TabPage1.Controls.Add(LastNameTextbox)
+        TabPage1.Controls.Add(MiddleNameTextbox)
+        TabPage1.Controls.Add(FirstNameTextbox)
         TabPage1.Font = New Font("Verdana", 11.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         TabPage1.Location = New Point(4, 24)
         TabPage1.Name = "TabPage1"
         TabPage1.Padding = New Padding(3)
         TabPage1.Size = New Size(656, 426)
         TabPage1.TabIndex = 0
-        TabPage1.Text = "Basic info"
+        TabPage1.Text = "Basic information"
         TabPage1.UseVisualStyleBackColor = True
         ' 
         ' Label8
         ' 
         Label8.AutoSize = True
         Label8.Font = New Font("Verdana", 14.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label8.Location = New Point(140, 362)
+        Label8.Location = New Point(145, 362)
         Label8.Name = "Label8"
         Label8.Size = New Size(100, 23)
         Label8.TabIndex = 14
@@ -235,117 +252,126 @@ Partial Class RegistrationPage
         Label1.TabIndex = 8
         Label1.Text = "First name"
         ' 
-        ' TextBox5
+        ' PasswordTextbox
         ' 
-        TextBox5.BackColor = SystemColors.ControlLight
-        TextBox5.Font = New Font("Verdana", 14.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        TextBox5.ForeColor = Color.FromArgb(CByte(199), CByte(199), CByte(199))
-        TextBox5.Location = New Point(251, 359)
-        TextBox5.Name = "TextBox5"
-        TextBox5.Size = New Size(281, 31)
-        TextBox5.TabIndex = 7
-        TextBox5.Text = "Password"
+        PasswordTextbox.BackColor = SystemColors.ControlLight
+        PasswordTextbox.Font = New Font("Verdana", 14.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        PasswordTextbox.ForeColor = Color.FromArgb(CByte(199), CByte(199), CByte(199))
+        PasswordTextbox.Location = New Point(251, 359)
+        PasswordTextbox.Name = "PasswordTextbox"
+        PasswordTextbox.PasswordChar = "*"c
+        PasswordTextbox.Size = New Size(281, 31)
+        PasswordTextbox.TabIndex = 7
+        PasswordTextbox.Text = "********"
         ' 
-        ' TextBox4
+        ' UsernameTextbox
         ' 
-        TextBox4.BackColor = SystemColors.ControlLight
-        TextBox4.Font = New Font("Verdana", 14.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        TextBox4.ForeColor = Color.FromArgb(CByte(199), CByte(199), CByte(199))
-        TextBox4.Location = New Point(252, 298)
-        TextBox4.Name = "TextBox4"
-        TextBox4.Size = New Size(281, 31)
-        TextBox4.TabIndex = 6
-        TextBox4.Text = "Username"
+        UsernameTextbox.BackColor = SystemColors.ControlLight
+        UsernameTextbox.Font = New Font("Verdana", 14.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        UsernameTextbox.ForeColor = Color.FromArgb(CByte(199), CByte(199), CByte(199))
+        UsernameTextbox.Location = New Point(252, 298)
+        UsernameTextbox.Name = "UsernameTextbox"
+        UsernameTextbox.Size = New Size(281, 31)
+        UsernameTextbox.TabIndex = 6
+        UsernameTextbox.Text = "romnoel02"
         ' 
         ' Panel3
         ' 
-        Panel3.Controls.Add(RadioButton3)
-        Panel3.Controls.Add(RadioButton2)
-        Panel3.Controls.Add(RadioButton1)
+        Panel3.Controls.Add(NotToRadioButton)
+        Panel3.Controls.Add(FemaleRadioButton)
+        Panel3.Controls.Add(MaleRadioButton)
         Panel3.Location = New Point(251, 249)
         Panel3.Name = "Panel3"
         Panel3.Size = New Size(281, 27)
         Panel3.TabIndex = 5
         ' 
-        ' RadioButton3
+        ' NotToRadioButton
         ' 
-        RadioButton3.AutoSize = True
-        RadioButton3.Dock = DockStyle.Right
-        RadioButton3.Location = New Point(160, 0)
-        RadioButton3.Name = "RadioButton3"
-        RadioButton3.Size = New Size(121, 27)
-        RadioButton3.TabIndex = 2
-        RadioButton3.TabStop = True
-        RadioButton3.Text = "Prefer not to"
-        RadioButton3.UseVisualStyleBackColor = True
+        NotToRadioButton.AutoSize = True
+        NotToRadioButton.Dock = DockStyle.Right
+        NotToRadioButton.Location = New Point(160, 0)
+        NotToRadioButton.Name = "NotToRadioButton"
+        NotToRadioButton.Size = New Size(121, 27)
+        NotToRadioButton.TabIndex = 2
+        NotToRadioButton.TabStop = True
+        NotToRadioButton.Text = "Prefer not to"
+        NotToRadioButton.UseVisualStyleBackColor = True
         ' 
-        ' RadioButton2
+        ' FemaleRadioButton
         ' 
-        RadioButton2.AutoSize = True
-        RadioButton2.Dock = DockStyle.Fill
-        RadioButton2.Location = New Point(60, 0)
-        RadioButton2.Name = "RadioButton2"
-        RadioButton2.Size = New Size(221, 27)
-        RadioButton2.TabIndex = 1
-        RadioButton2.TabStop = True
-        RadioButton2.Text = "Female"
-        RadioButton2.UseVisualStyleBackColor = True
+        FemaleRadioButton.AutoSize = True
+        FemaleRadioButton.Dock = DockStyle.Fill
+        FemaleRadioButton.Location = New Point(60, 0)
+        FemaleRadioButton.Name = "FemaleRadioButton"
+        FemaleRadioButton.Size = New Size(221, 27)
+        FemaleRadioButton.TabIndex = 1
+        FemaleRadioButton.TabStop = True
+        FemaleRadioButton.Text = "Female"
+        FemaleRadioButton.UseVisualStyleBackColor = True
         ' 
-        ' RadioButton1
+        ' MaleRadioButton
         ' 
-        RadioButton1.AutoSize = True
-        RadioButton1.Dock = DockStyle.Left
-        RadioButton1.Location = New Point(0, 0)
-        RadioButton1.Name = "RadioButton1"
-        RadioButton1.Size = New Size(60, 27)
-        RadioButton1.TabIndex = 0
-        RadioButton1.TabStop = True
-        RadioButton1.Text = "Male"
-        RadioButton1.UseVisualStyleBackColor = True
+        MaleRadioButton.AutoSize = True
+        MaleRadioButton.Dock = DockStyle.Left
+        MaleRadioButton.Location = New Point(0, 0)
+        MaleRadioButton.Name = "MaleRadioButton"
+        MaleRadioButton.Size = New Size(60, 27)
+        MaleRadioButton.TabIndex = 0
+        MaleRadioButton.TabStop = True
+        MaleRadioButton.Text = "Male"
+        MaleRadioButton.UseVisualStyleBackColor = True
         ' 
-        ' DateTimePicker1
+        ' BirthdayPicker
         ' 
-        DateTimePicker1.Font = New Font("Verdana", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        DateTimePicker1.Location = New Point(252, 197)
-        DateTimePicker1.Name = "DateTimePicker1"
-        DateTimePicker1.Size = New Size(281, 27)
-        DateTimePicker1.TabIndex = 4
+        BirthdayPicker.Font = New Font("Verdana", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        BirthdayPicker.Location = New Point(252, 197)
+        BirthdayPicker.Name = "BirthdayPicker"
+        BirthdayPicker.Size = New Size(281, 27)
+        BirthdayPicker.TabIndex = 4
         ' 
-        ' TextBox3
+        ' LastNameTextbox
         ' 
-        TextBox3.BackColor = SystemColors.ControlLight
-        TextBox3.Font = New Font("Verdana", 14.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        TextBox3.ForeColor = Color.FromArgb(CByte(199), CByte(199), CByte(199))
-        TextBox3.Location = New Point(251, 136)
-        TextBox3.Name = "TextBox3"
-        TextBox3.Size = New Size(281, 31)
-        TextBox3.TabIndex = 2
-        TextBox3.Text = "Petracorta"
+        LastNameTextbox.BackColor = SystemColors.ControlLight
+        LastNameTextbox.Font = New Font("Verdana", 14.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        LastNameTextbox.ForeColor = Color.FromArgb(CByte(199), CByte(199), CByte(199))
+        LastNameTextbox.Location = New Point(251, 136)
+        LastNameTextbox.Name = "LastNameTextbox"
+        LastNameTextbox.Size = New Size(281, 31)
+        LastNameTextbox.TabIndex = 2
+        LastNameTextbox.Text = "Petracorta"
         ' 
-        ' TextBox2
+        ' MiddleNameTextbox
         ' 
-        TextBox2.BackColor = SystemColors.ControlLight
-        TextBox2.Font = New Font("Verdana", 14.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        TextBox2.ForeColor = Color.FromArgb(CByte(199), CByte(199), CByte(199))
-        TextBox2.Location = New Point(251, 81)
-        TextBox2.Name = "TextBox2"
-        TextBox2.Size = New Size(281, 31)
-        TextBox2.TabIndex = 1
-        TextBox2.Text = "Edralin"
+        MiddleNameTextbox.BackColor = SystemColors.ControlLight
+        MiddleNameTextbox.Font = New Font("Verdana", 14.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        MiddleNameTextbox.ForeColor = Color.FromArgb(CByte(199), CByte(199), CByte(199))
+        MiddleNameTextbox.Location = New Point(251, 81)
+        MiddleNameTextbox.Name = "MiddleNameTextbox"
+        MiddleNameTextbox.Size = New Size(281, 31)
+        MiddleNameTextbox.TabIndex = 1
+        MiddleNameTextbox.Text = "Edralin"
         ' 
-        ' TextBox1
+        ' FirstNameTextbox
         ' 
-        TextBox1.BackColor = SystemColors.ControlLight
-        TextBox1.Font = New Font("Verdana", 14.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        TextBox1.ForeColor = Color.FromArgb(CByte(199), CByte(199), CByte(199))
-        TextBox1.Location = New Point(251, 30)
-        TextBox1.Name = "TextBox1"
-        TextBox1.Size = New Size(281, 31)
-        TextBox1.TabIndex = 0
-        TextBox1.Text = "Romnoel"
+        FirstNameTextbox.BackColor = SystemColors.ControlLight
+        FirstNameTextbox.Font = New Font("Verdana", 14.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        FirstNameTextbox.ForeColor = Color.FromArgb(CByte(199), CByte(199), CByte(199))
+        FirstNameTextbox.Location = New Point(251, 30)
+        FirstNameTextbox.Name = "FirstNameTextbox"
+        FirstNameTextbox.Size = New Size(281, 31)
+        FirstNameTextbox.TabIndex = 0
+        FirstNameTextbox.Text = "Romnoel"
         ' 
         ' TabPage2
         ' 
+        TabPage2.Controls.Add(DepartmentDropdown)
+        TabPage2.Controls.Add(Label9)
+        TabPage2.Controls.Add(Label13)
+        TabPage2.Controls.Add(Label14)
+        TabPage2.Controls.Add(Label15)
+        TabPage2.Controls.Add(AddressTextbox)
+        TabPage2.Controls.Add(ContactTextbox)
+        TabPage2.Controls.Add(EmailTextbox)
         TabPage2.Location = New Point(4, 24)
         TabPage2.Name = "TabPage2"
         TabPage2.Padding = New Padding(3)
@@ -354,14 +380,179 @@ Partial Class RegistrationPage
         TabPage2.Text = "Institution"
         TabPage2.UseVisualStyleBackColor = True
         ' 
+        ' DepartmentDropdown
+        ' 
+        DepartmentDropdown.Font = New Font("Verdana", 14.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        DepartmentDropdown.FormattingEnabled = True
+        DepartmentDropdown.Location = New Point(251, 195)
+        DepartmentDropdown.Name = "DepartmentDropdown"
+        DepartmentDropdown.Size = New Size(270, 31)
+        DepartmentDropdown.TabIndex = 27
+        ' 
+        ' Label9
+        ' 
+        Label9.AutoSize = True
+        Label9.Font = New Font("Verdana", 14.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label9.Location = New Point(128, 198)
+        Label9.Name = "Label9"
+        Label9.Size = New Size(122, 23)
+        Label9.TabIndex = 26
+        Label9.Text = "Department"
+        ' 
+        ' Label13
+        ' 
+        Label13.AutoSize = True
+        Label13.Font = New Font("Verdana", 14.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label13.Location = New Point(164, 139)
+        Label13.Name = "Label13"
+        Label13.Size = New Size(86, 23)
+        Label13.TabIndex = 24
+        Label13.Text = "Address"
+        ' 
+        ' Label14
+        ' 
+        Label14.AutoSize = True
+        Label14.Font = New Font("Verdana", 14.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label14.Location = New Point(88, 84)
+        Label14.Name = "Label14"
+        Label14.Size = New Size(162, 23)
+        Label14.TabIndex = 23
+        Label14.Text = "Contact number"
+        ' 
+        ' Label15
+        ' 
+        Label15.AutoSize = True
+        Label15.Font = New Font("Verdana", 14.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label15.Location = New Point(182, 33)
+        Label15.Name = "Label15"
+        Label15.Size = New Size(63, 23)
+        Label15.TabIndex = 22
+        Label15.Text = "Email"
+        ' 
+        ' AddressTextbox
+        ' 
+        AddressTextbox.BackColor = SystemColors.ControlLight
+        AddressTextbox.Font = New Font("Verdana", 14.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        AddressTextbox.ForeColor = Color.FromArgb(CByte(199), CByte(199), CByte(199))
+        AddressTextbox.Location = New Point(251, 136)
+        AddressTextbox.Name = "AddressTextbox"
+        AddressTextbox.Size = New Size(281, 31)
+        AddressTextbox.TabIndex = 17
+        AddressTextbox.Text = "Montalban, Rizal"
+        ' 
+        ' ContactTextbox
+        ' 
+        ContactTextbox.BackColor = SystemColors.ControlLight
+        ContactTextbox.Font = New Font("Verdana", 14.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        ContactTextbox.ForeColor = Color.FromArgb(CByte(199), CByte(199), CByte(199))
+        ContactTextbox.Location = New Point(251, 81)
+        ContactTextbox.Name = "ContactTextbox"
+        ContactTextbox.Size = New Size(281, 31)
+        ContactTextbox.TabIndex = 16
+        ContactTextbox.Text = "09774669886"
+        ' 
+        ' EmailTextbox
+        ' 
+        EmailTextbox.BackColor = SystemColors.ControlLight
+        EmailTextbox.Font = New Font("Verdana", 14.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        EmailTextbox.ForeColor = Color.FromArgb(CByte(199), CByte(199), CByte(199))
+        EmailTextbox.Location = New Point(251, 30)
+        EmailTextbox.Name = "EmailTextbox"
+        EmailTextbox.Size = New Size(281, 31)
+        EmailTextbox.TabIndex = 15
+        EmailTextbox.Text = "romnoel.petracorta@gmail.com"
+        ' 
         ' TabPage3
         ' 
+        TabPage3.Controls.Add(CompleteRegistration)
+        TabPage3.Controls.Add(Label10)
+        TabPage3.Controls.Add(Label11)
+        TabPage3.Controls.Add(Label12)
+        TabPage3.Controls.Add(TinTextbox)
+        TabPage3.Controls.Add(BankDetailsTextbox)
+        TabPage3.Controls.Add(GovermentTextbox)
         TabPage3.Location = New Point(4, 24)
         TabPage3.Name = "TabPage3"
         TabPage3.Size = New Size(656, 426)
         TabPage3.TabIndex = 2
         TabPage3.Text = "Identification"
         TabPage3.UseVisualStyleBackColor = True
+        ' 
+        ' CompleteRegistration
+        ' 
+        CompleteRegistration.BackColor = Color.FromArgb(CByte(0), CByte(82), CByte(8))
+        CompleteRegistration.FlatStyle = FlatStyle.Flat
+        CompleteRegistration.Font = New Font("Verdana", 9.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        CompleteRegistration.ForeColor = Color.White
+        CompleteRegistration.Location = New Point(456, 351)
+        CompleteRegistration.Name = "CompleteRegistration"
+        CompleteRegistration.Size = New Size(76, 43)
+        CompleteRegistration.TabIndex = 6
+        CompleteRegistration.Text = "Register"
+        CompleteRegistration.UseVisualStyleBackColor = False
+        ' 
+        ' Label10
+        ' 
+        Label10.AutoSize = True
+        Label10.Font = New Font("Verdana", 14.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label10.Location = New Point(120, 139)
+        Label10.Name = "Label10"
+        Label10.Size = New Size(125, 23)
+        Label10.TabIndex = 33
+        Label10.Text = "Tax | Tin ID"
+        ' 
+        ' Label11
+        ' 
+        Label11.AutoSize = True
+        Label11.Font = New Font("Verdana", 14.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label11.Location = New Point(115, 89)
+        Label11.Name = "Label11"
+        Label11.Size = New Size(130, 23)
+        Label11.TabIndex = 32
+        Label11.Text = "Bank Details"
+        ' 
+        ' Label12
+        ' 
+        Label12.AutoSize = True
+        Label12.Font = New Font("Verdana", 14.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label12.Location = New Point(88, 33)
+        Label12.Name = "Label12"
+        Label12.Size = New Size(157, 23)
+        Label12.TabIndex = 31
+        Label12.Text = "Government ID"
+        ' 
+        ' TinTextbox
+        ' 
+        TinTextbox.BackColor = SystemColors.ControlLight
+        TinTextbox.Font = New Font("Verdana", 14.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        TinTextbox.ForeColor = Color.FromArgb(CByte(199), CByte(199), CByte(199))
+        TinTextbox.Location = New Point(251, 136)
+        TinTextbox.Name = "TinTextbox"
+        TinTextbox.Size = New Size(281, 31)
+        TinTextbox.TabIndex = 30
+        TinTextbox.Text = "123-456-789-000"
+        ' 
+        ' BankDetailsTextbox
+        ' 
+        BankDetailsTextbox.BackColor = SystemColors.ControlLight
+        BankDetailsTextbox.Font = New Font("Verdana", 14.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        BankDetailsTextbox.ForeColor = Color.FromArgb(CByte(199), CByte(199), CByte(199))
+        BankDetailsTextbox.Location = New Point(251, 81)
+        BankDetailsTextbox.Name = "BankDetailsTextbox"
+        BankDetailsTextbox.Size = New Size(281, 31)
+        BankDetailsTextbox.TabIndex = 29
+        BankDetailsTextbox.Text = "33-7913734-2"
+        ' 
+        ' GovermentTextbox
+        ' 
+        GovermentTextbox.BackColor = SystemColors.ControlLight
+        GovermentTextbox.Font = New Font("Verdana", 14.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        GovermentTextbox.ForeColor = Color.FromArgb(CByte(199), CByte(199), CByte(199))
+        GovermentTextbox.Location = New Point(251, 30)
+        GovermentTextbox.Name = "GovermentTextbox"
+        GovermentTextbox.Size = New Size(281, 31)
+        GovermentTextbox.TabIndex = 28
+        GovermentTextbox.Text = "Social Security"
         ' 
         ' RegistrationPage
         ' 
@@ -384,6 +575,10 @@ Partial Class RegistrationPage
         TabPage1.PerformLayout()
         Panel3.ResumeLayout(False)
         Panel3.PerformLayout()
+        TabPage2.ResumeLayout(False)
+        TabPage2.PerformLayout()
+        TabPage3.ResumeLayout(False)
+        TabPage3.PerformLayout()
         ResumeLayout(False)
         PerformLayout()
     End Sub
@@ -398,21 +593,36 @@ Partial Class RegistrationPage
     Friend WithEvents TabPage1 As TabPage
     Friend WithEvents TabPage2 As TabPage
     Friend WithEvents TabPage3 As TabPage
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents DateTimePicker1 As DateTimePicker
-    Friend WithEvents TextBox3 As TextBox
-    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents FirstNameTextbox As TextBox
+    Friend WithEvents BirthdayPicker As DateTimePicker
+    Friend WithEvents LastNameTextbox As TextBox
+    Friend WithEvents MiddleNameTextbox As TextBox
     Friend WithEvents Panel3 As Panel
-    Friend WithEvents RadioButton3 As RadioButton
-    Friend WithEvents RadioButton2 As RadioButton
-    Friend WithEvents RadioButton1 As RadioButton
+    Friend WithEvents NotToRadioButton As RadioButton
+    Friend WithEvents FemaleRadioButton As RadioButton
+    Friend WithEvents MaleRadioButton As RadioButton
     Friend WithEvents Label1 As Label
-    Friend WithEvents TextBox5 As TextBox
-    Friend WithEvents TextBox4 As TextBox
+    Friend WithEvents PasswordTextbox As TextBox
+    Friend WithEvents UsernameTextbox As TextBox
     Friend WithEvents Label6 As Label
     Friend WithEvents Label5 As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents Label8 As Label
     Friend WithEvents Label7 As Label
+    Friend WithEvents Label13 As Label
+    Friend WithEvents Label14 As Label
+    Friend WithEvents Label15 As Label
+    Friend WithEvents AddressTextbox As TextBox
+    Friend WithEvents ContactTextbox As TextBox
+    Friend WithEvents EmailTextbox As TextBox
+    Friend WithEvents Label9 As Label
+    Friend WithEvents DepartmentDropdown As ComboBox
+    Friend WithEvents CompleteRegistration As Button
+    Friend WithEvents Label10 As Label
+    Friend WithEvents Label11 As Label
+    Friend WithEvents Label12 As Label
+    Friend WithEvents TinTextbox As TextBox
+    Friend WithEvents BankDetailsTextbox As TextBox
+    Friend WithEvents GovermentTextbox As TextBox
 End Class

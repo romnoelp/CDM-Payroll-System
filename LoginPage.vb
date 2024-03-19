@@ -1,7 +1,9 @@
-﻿Imports MySql.Data.MySqlClient
+﻿Imports System.Drawing
+Imports MySql.Data.MySqlClient
 
 Public Class LoginPage
     Dim dbFunctions As New DatabaseFunctions()
+
     Public Sub New()
         InitializeComponent()
         Me.StartPosition = FormStartPosition.CenterScreen
@@ -71,7 +73,6 @@ Public Class LoginPage
 
         If dbFunctions.AuthenticateUser(username, password) Then
             MessageBox.Show("Login successful!")
-            ' Proceed to the next form or perform other actions here
         Else
             MessageBox.Show("Invalid username or password!")
         End If

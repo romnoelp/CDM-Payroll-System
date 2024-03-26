@@ -72,7 +72,9 @@ Public Class LoginPage
         Dim password As String = PasswordField.Text
 
         If dbFunctions.AuthenticateUser(username, password) Then
+            Me.Hide()
             MessageBox.Show("Login successful!")
+            LandingPage.Show()
         Else
             MessageBox.Show("Invalid username or password!")
         End If

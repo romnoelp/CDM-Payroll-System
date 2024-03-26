@@ -249,8 +249,9 @@ Public Class RegistrationPage
         Dim bankDetails As String = BankDetailsTextbox.Text
         Dim tinID As String = TinTextbox.Text
         Dim gender As String = If(MaleRadioButton.Checked, "Male", If(FemaleRadioButton.Checked, "Female", "Not Specified"))
-
         Dim registrationSuccess As Boolean = dbFunctions.RegisterUser(firstName, middleName, lastName, birthday, username, password, email, contact, address, department, governmentID, bankDetails, tinID, gender)
+        Me.Close()
+        LoginPage.Show()
     End Sub
 
 End Class
